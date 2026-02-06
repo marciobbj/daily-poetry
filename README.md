@@ -15,7 +15,7 @@
 - **Live Clock** — Real-time display with date in your locale
 - **Daily Poems** — Curated collection in Portuguese and English, with external API support (PoetryDB)
 - **HD Backgrounds** — Stunning nature images from Picsum and Wallhaven
-- **Smart Rotation** — Poems automatically change every 15 minutes; used poems won't repeat for 30 days
+- **Smart Rotation** — Poems automatically change every day; used poems won't repeat for 30 days
 - **Google Search** — Integrated search bar
 - **Minimalist Design** — Clean, distraction-free interface with elegant typography
 
