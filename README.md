@@ -6,6 +6,8 @@
   **A beautiful new tab extension with daily poems and HD nature backgrounds**
 </div>
 
+![Daily Poetry Screenshot](imgs/screenshot_1.png)
+
 ---
 
 ## Features
@@ -41,6 +43,8 @@ daily-poetry-extension/
 │   └── storage.js         # Poem rotation & storage
 ├── data/
 │   └── poems.json         # Local poems database
+├── imgs/
+│   └── screenshot_1.png   # Extension screenshot
 └── icons/
     ├── icon16.png
     ├── icon48.png
