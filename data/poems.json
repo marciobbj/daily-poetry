@@ -1,0 +1,324 @@
+{
+  "poems": [
+    {
+      "id": "pt-001",
+      "text": "Tenho em mim todos os sonhos do mundo.",
+      "author": "Fernando Pessoa",
+      "title": "Livro do Desassossego",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-002",
+      "text": "Pedras no caminho?\nGuardo todas, um dia vou construir um castelo.",
+      "author": "Fernando Pessoa",
+      "title": "",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-003",
+      "text": "Navegar é preciso, viver não é preciso.",
+      "author": "Fernando Pessoa",
+      "title": "",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-004",
+      "text": "Tudo vale a pena\nQuando a alma não é pequena.",
+      "author": "Fernando Pessoa",
+      "title": "Mar Português",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-005",
+      "text": "Há um tempo em que é preciso abandonar as roupas usadas,\nque já têm a forma do nosso corpo,\ne esquecer os nossos caminhos,\nque nos levam sempre aos mesmos lugares.",
+      "author": "Fernando Pessoa",
+      "title": "",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-006",
+      "text": "No meio do caminho tinha uma pedra\ntinha uma pedra no meio do caminho.",
+      "author": "Carlos Drummond de Andrade",
+      "title": "No Meio do Caminho",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-007",
+      "text": "E agora, José?\nA festa acabou,\na luz apagou,\no povo sumiu,\na noite esfriou.",
+      "author": "Carlos Drummond de Andrade",
+      "title": "José",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-008",
+      "text": "Amar é sentir na sua felicidade\numa felicidade estranha.",
+      "author": "Carlos Drummond de Andrade",
+      "title": "",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-009",
+      "text": "Tinha uma pedra no meio do caminho,\ne a pedra ficou em mim,\ne eu fiquei na pedra.",
+      "author": "Carlos Drummond de Andrade",
+      "title": "",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-010",
+      "text": "O amor, quando se revela,\nnão se sabe revelar.\nSabe bem olhar pra ela,\nmas não lhe sabe falar.",
+      "author": "Fernando Pessoa",
+      "title": "",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-011",
+      "text": "Eu canto porque o instante existe\ne a minha vida está completa.\nNão sou alegre nem sou triste:\nsou poeta.",
+      "author": "Cecília Meireles",
+      "title": "Motivo",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-012",
+      "text": "Liberdade, essa palavra\nque o sonho humano alimenta,\nque não há ninguém que explique\ne ninguém que não entenda.",
+      "author": "Cecília Meireles",
+      "title": "Romanceiro da Inconfidência",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-013",
+      "text": "Eu deixo a vida como deixa o tédio\nO deserto, o ignoto, o inexpressivo.",
+      "author": "Augusto dos Anjos",
+      "title": "Psicologia de um Vencido",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-014",
+      "text": "Não sei quantas almas tenho.\nCada momento mudei.\nContinuamente me estranho.\nNunca me vi nem achei.",
+      "author": "Fernando Pessoa",
+      "title": "",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-015",
+      "text": "Minha mãe achava estudo\na coisa mais fina do mundo.\nNão é.\nA coisa mais fina do mundo é o sentimento.",
+      "author": "Adélia Prado",
+      "title": "De Cor",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-016",
+      "text": "A vida é uma peça de teatro\nque não permite ensaios.\nPor isso, cante, chore, dance, ria\ne viva intensamente.",
+      "author": "Charles Chaplin",
+      "title": "",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-017",
+      "text": "Que não seja imortal, posto que é chama,\nMas que seja infinito enquanto dure.",
+      "author": "Vinícius de Moraes",
+      "title": "Soneto de Fidelidade",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-018",
+      "text": "Eu poderia suportar, embora não sem dor,\nque tivessem morrido todos os meus amores,\nmas enlouqueceria se morressem todos os meus amigos.",
+      "author": "Vinícius de Moraes",
+      "title": "",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-019",
+      "text": "De tudo ao meu amor serei atento\nAntes, e com tal zelo, e sempre, e tanto\nQue mesmo em face do maior encanto\nDele se encante mais meu pensamento.",
+      "author": "Vinícius de Moraes",
+      "title": "Soneto de Fidelidade",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-020",
+      "text": "As flores de amanhã\nestão nas sementes de hoje.",
+      "author": "Provérbio Chinês",
+      "title": "",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "en-001",
+      "text": "Two roads diverged in a wood, and I—\nI took the one less traveled by,\nAnd that has made all the difference.",
+      "author": "Robert Frost",
+      "title": "The Road Not Taken",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-002",
+      "text": "Hope is the thing with feathers\nThat perches in the soul,\nAnd sings the tune without the words,\nAnd never stops at all.",
+      "author": "Emily Dickinson",
+      "title": "Hope is the Thing with Feathers",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-003",
+      "text": "I wandered lonely as a cloud\nThat floats on high o'er vales and hills,\nWhen all at once I saw a crowd,\nA host, of golden daffodils.",
+      "author": "William Wordsworth",
+      "title": "Daffodils",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-004",
+      "text": "Do not go gentle into that good night.\nRage, rage against the dying of the light.",
+      "author": "Dylan Thomas",
+      "title": "Do Not Go Gentle into That Good Night",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-005",
+      "text": "The woods are lovely, dark and deep,\nBut I have promises to keep,\nAnd miles to go before I sleep.",
+      "author": "Robert Frost",
+      "title": "Stopping by Woods on a Snowy Evening",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-006",
+      "text": "What is this life if, full of care,\nWe have no time to stand and stare.",
+      "author": "William Henry Davies",
+      "title": "Leisure",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-007",
+      "text": "I have measured out my life with coffee spoons.",
+      "author": "T.S. Eliot",
+      "title": "The Love Song of J. Alfred Prufrock",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-008",
+      "text": "Shall I compare thee to a summer's day?\nThou art more lovely and more temperate.",
+      "author": "William Shakespeare",
+      "title": "Sonnet 18",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-009",
+      "text": "I carry your heart with me\n(I carry it in my heart).",
+      "author": "E.E. Cummings",
+      "title": "I Carry Your Heart with Me",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-010",
+      "text": "Out of the night that covers me,\nBlack as the pit from pole to pole,\nI thank whatever gods may be\nFor my unconquerable soul.",
+      "author": "William Ernest Henley",
+      "title": "Invictus",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-011",
+      "text": "I am the master of my fate,\nI am the captain of my soul.",
+      "author": "William Ernest Henley",
+      "title": "Invictus",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-012",
+      "text": "Because I could not stop for Death,\nHe kindly stopped for me.",
+      "author": "Emily Dickinson",
+      "title": "Because I Could Not Stop for Death",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-013",
+      "text": "In three words I can sum up\neverything I've learned about life:\nIt goes on.",
+      "author": "Robert Frost",
+      "title": "",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-014",
+      "text": "How do I love thee? Let me count the ways.\nI love thee to the depth and breadth and height\nMy soul can reach.",
+      "author": "Elizabeth Barrett Browning",
+      "title": "Sonnet 43",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-015",
+      "text": "To see a World in a Grain of Sand\nAnd a Heaven in a Wild Flower,\nHold Infinity in the palm of your hand\nAnd Eternity in an hour.",
+      "author": "William Blake",
+      "title": "Auguries of Innocence",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-016",
+      "text": "The only way to do great work\nis to love what you do.",
+      "author": "Steve Jobs",
+      "title": "",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-017",
+      "text": "If you can dream it, you can do it.",
+      "author": "Walt Disney",
+      "title": "",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-018",
+      "text": "What we think, we become.",
+      "author": "Buddha",
+      "title": "",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-019",
+      "text": "The journey of a thousand miles\nbegins with a single step.",
+      "author": "Lao Tzu",
+      "title": "Tao Te Ching",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-020",
+      "text": "Be yourself; everyone else is already taken.",
+      "author": "Oscar Wilde",
+      "title": "",
+      "language": "en",
+      "lastUsed": null
+    }
+  ]
+}
