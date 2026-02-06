@@ -252,12 +252,6 @@ async function init() {
   displayPoem(poem);
   if (background) displayBackground(background);
   
-  const FIFTEEN_MINUTES_MS = 15 * 60 * 1000;
-  setInterval(async () => {
-    const newPoem = await getPoem(true);
-    displayPoem(newPoem);
-  }, FIFTEEN_MINUTES_MS);
-  
   DOM.searchInput.focus();
 }
 
