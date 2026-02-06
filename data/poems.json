@@ -161,6 +161,22 @@
       "lastUsed": null
     },
     {
+      "id": "pt-021",
+      "text": "Segue o teu destino,\nRega tuas plantas,\nAma tuas rosas,\nO resto é a sombra das árvores alheias."
+      "author": "Fernando Antônio Nogueira Pessoa",
+      "title": "Segue o teu destino",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-022",
+      "text": "O meu tempo e o teu, amada,\ntrancendem qualquer medida.\nAlém do amor não há nada,\nAmar é o sumo da vida.",
+      "author": "Carlos Drummond de Andrade",
+      "title": "O tempo passa? Não passa",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
       "id": "en-001",
       "text": "Two roads diverged in a wood, and I—\nI took the one less traveled by,\nAnd that has made all the difference.",
       "author": "Robert Frost",
@@ -319,6 +335,6 @@
       "title": "",
       "language": "en",
       "lastUsed": null
-    }
+    }, 
   ]
 }
