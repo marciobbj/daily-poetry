@@ -3,6 +3,7 @@ const STORAGE_KEYS = {
   CURRENT_POEM: 'currentPoem',
   CURRENT_BACKGROUND: 'currentBackground',
   LAST_POEM_DATE: 'lastPoemDate',
+  LAST_BACKGROUND_DATE: 'lastBackgroundDate',
   LANGUAGE: 'language'
 };
 
@@ -79,18 +80,33 @@ export async function saveCurrentPoem(poem) {
 }
 
 export async function getCurrentBackground() {
-  const result = await chrome.storage.local.get(STORAGE_KEYS.CURRENT_BACKGROUND);
-  return result[STORAGE_KEYS.CURRENT_BACKGROUND] || null;
+  const result = await chrome.storage.local.get([
+    STORAGE_KEYS.CURRENT_BACKGROUND,
+    STORAGE_KEYS.LAST_BACKGROUND_DATE
+  ]);
+  
+  const today = new Date().toDateString();
+  const lastDate = result[STORAGE_KEYS.LAST_BACKGROUND_DATE];
+  
+  if (lastDate === today && result[STORAGE_KEYS.CURRENT_BACKGROUND]) {
+    return result[STORAGE_KEYS.CURRENT_BACKGROUND];
+  }
+  
+  return null;
 }
 
 export async function saveCurrentBackground(background) {
   await chrome.storage.local.set({
-    [STORAGE_KEYS.CURRENT_BACKGROUND]: background
+    [STORAGE_KEYS.CURRENT_BACKGROUND]: background,
+    [STORAGE_KEYS.LAST_BACKGROUND_DATE]: new Date().toDateString()
   });
 }
 
 export async function clearCurrentBackground() {
-  await chrome.storage.local.remove(STORAGE_KEYS.CURRENT_BACKGROUND);
+  await chrome.storage.local.remove([
+    STORAGE_KEYS.CURRENT_BACKGROUND,
+    STORAGE_KEYS.LAST_BACKGROUND_DATE
+  ]);
 }
 
 export async function getLanguage() {

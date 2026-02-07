@@ -124,7 +124,8 @@ async function loadLocalPoems() {
     const response = await fetch(chrome.runtime.getURL('data/poems.json'));
     const data = await response.json();
     localPoems = data.poems;
-  } catch {
+  } catch (err){
+    console.log(err)
     localPoems = [
       {
         id: 'fallback-1',
