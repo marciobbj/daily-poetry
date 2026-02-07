@@ -4,6 +4,8 @@
   # Daily Poetry
   
   **A beautiful new tab extension with daily poems and HD nature backgrounds**
+
+  [![Chrome Web Store](https://img.shields.io/badge/Chrome_Web_Store-Daily_Poetry-blue?logo=google-chrome&logoColor=white)](https://chromewebstore.google.com/detail/daily-poetry/emggikekmffkllbdljheicagblhhbpoj)
 </div>
 
 ![Daily Poetry Screenshot](imgs/screenshot_1.png)
@@ -20,6 +22,10 @@
 - **Minimalist Design** — Clean, distraction-free interface with elegant typography
 
 ## Installation
+
+### From Chrome Web Store (Recommended)
+
+You can install the extension directly from the [Chrome Web Store](https://chromewebstore.google.com/detail/daily-poetry/emggikekmffkllbdljheicagblhhbpoj).
 
 ### From Source (Developer Mode)
 
