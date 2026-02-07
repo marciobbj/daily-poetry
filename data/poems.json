@@ -162,6 +162,15 @@
     },
     {
       "id": "pt-021",
+      "text": "Todos esses que aí estão\nAtravancando o meu caminho,\nEles passarão...\nEu passarinho!",
+      "author": "Mário Quintana",
+      "title": "",
+      "language": "pt",
+      "lastUsed": null
+ 
+    },
+    {
+      "id": "pt-022",
       "text": "Segue o teu destino,\nRega tuas plantas,\nAma tuas rosas,\nO resto é a sombra das árvores alheias.",
       "author": "Fernando Antônio Nogueira Pessoa",
       "title": "Segue o teu destino",
@@ -169,10 +178,26 @@
       "lastUsed": null
     },
     {
-      "id": "pt-022",
+      "id": "pt-023",
       "text": "O meu tempo e o teu, amada,\ntrancendem qualquer medida.\nAlém do amor não há nada,\nAmar é o sumo da vida.",
       "author": "Carlos Drummond de Andrade",
       "title": "O tempo passa? Não passa",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-024",
+      "text": "As pessoas mais felizes não\ntêm as melhores coisas.\nElas sabem fazer o melhor das\noportunidades que aparecem\nem seus caminhos.\nA felicidade aparece para aqueles que choram.\nPara aqueles que se machucam.\nPara aqueles que buscam e tentam sempre.",
+      "author": "Clarice Lispector",
+      "title": "Pessoas Felizes",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-025",
+      "text": "Se sou amado\nQuanto mais amado\nMais correspondo ao amor\nSe sou esquecido\nDevo esquecer também\nPois amor é feito espelho\nTem que ter reflexo.",
+      "author": "Pablo Neruda",
+      "title": "Reflexo",
       "language": "pt",
       "lastUsed": null
     },
