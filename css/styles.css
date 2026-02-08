@@ -46,6 +46,7 @@ body {
 
 #bg-placeholder {
   z-index: 0;
+  opacity: 0.5;
   background-image: url('../imgs/blurred_img_loading.jpg');
 }
 
