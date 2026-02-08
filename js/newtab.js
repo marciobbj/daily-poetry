@@ -141,9 +141,20 @@ async function loadLocalPoems() {
 
 async function fetchExternalPoem() {
   return new Promise((resolve) => {
-    chrome.runtime.sendMessage({ action: 'fetchExternalPoem' }, (response) => {
-      resolve(response);
-    });
+    const timeout = setTimeout(() => resolve(null), 10000);
+    try {
+      chrome.runtime.sendMessage({ action: 'fetchExternalPoem' }, (response) => {
+        clearTimeout(timeout);
+        if (chrome.runtime.lastError) {
+          resolve(null);
+          return;
+        }
+        resolve(response);
+      });
+    } catch {
+      clearTimeout(timeout);
+      resolve(null);
+    }
   });
 }
 
@@ -177,9 +188,22 @@ async function getPoem(forceNew = false) {
 
 async function fetchBackground() {
   return new Promise((resolve) => {
-    chrome.runtime.sendMessage({ action: 'fetchBackground' }, (response) => {
-      resolve(response);
-    });
+    const timeout = setTimeout(() => resolve(null), 10000);
+    try {
+      chrome.runtime.sendMessage({ action: 'fetchBackground' }, (response) => {
+        clearTimeout(timeout);
+        if (chrome.runtime.lastError) {
+          console.log('Background fetch error:', chrome.runtime.lastError.message);
+          resolve(null);
+          return;
+        }
+        resolve(response);
+      });
+    } catch (err) {
+      clearTimeout(timeout);
+      console.log('Failed to send message to service worker:', err);
+      resolve(null);
+    }
   });
 }
 
@@ -194,6 +218,17 @@ async function getBackground(forceNew = false) {
     if (background && background.url) {
       await saveCurrentBackground(background);
       return background;
+    }
+  } catch {
+    // intentionally empty
+  }
+  
+  // Fallback: reuse expired background and refresh its date to prevent re-fetching every tab
+  try {
+    const fallback = await chrome.storage.local.get('currentBackground');
+    if (fallback.currentBackground && fallback.currentBackground.url) {
+      await saveCurrentBackground(fallback.currentBackground);
+      return fallback.currentBackground;
     }
   } catch {
     // intentionally empty
@@ -215,9 +250,12 @@ async function refreshPoem() {
 async function refreshBackground() {
   DOM.refreshBackground.classList.add('loading');
   try {
-    await clearCurrentBackground();
     const background = await getBackground(true);
-    if (background) displayBackground(background);
+    if (background) {
+      await clearCurrentBackground();
+      await saveCurrentBackground(background);
+      displayBackground(background);
+    }
   } finally {
     DOM.refreshBackground.classList.remove('loading');
   }

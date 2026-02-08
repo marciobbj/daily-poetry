@@ -7,8 +7,10 @@ async function fetchPicsumImage() {
   const response = await fetch(url, { method: 'HEAD' });
   if (!response.ok) {
     const fallbackUrl = `https://picsum.photos/${width}/${height}?random=${Date.now()}`;
+    const fallbackResponse = await fetch(fallbackUrl, { method: 'HEAD', redirect: 'follow' });
+    const resolvedUrl = fallbackResponse.url || fallbackUrl;
     return {
-      url: fallbackUrl,
+      url: resolvedUrl,
       source: 'Picsum',
       credit: 'Photo from Lorem Picsum',
       creditUrl: 'https://picsum.photos'
@@ -65,12 +67,23 @@ async function fetchRandomBackground() {
     }
   }
   
-  return {
-    url: `https://picsum.photos/1920/1080?random=${Date.now()}`,
-    source: 'Picsum',
-    credit: 'Photo from Lorem Picsum',
-    creditUrl: 'https://picsum.photos'
-  };
+  const fallbackUrl = `https://picsum.photos/1920/1080?random=${Date.now()}`;
+  try {
+    const response = await fetch(fallbackUrl, { method: 'HEAD', redirect: 'follow' });
+    return {
+      url: response.url || fallbackUrl,
+      source: 'Picsum',
+      credit: 'Photo from Lorem Picsum',
+      creditUrl: 'https://picsum.photos'
+    };
+  } catch {
+    return {
+      url: fallbackUrl,
+      source: 'Picsum',
+      credit: 'Photo from Lorem Picsum',
+      creditUrl: 'https://picsum.photos'
+    };
+  }
 }
 
 const POETRYDB_URL = 'https://poetrydb.org/random/1';
