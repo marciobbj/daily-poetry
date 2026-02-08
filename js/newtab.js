@@ -39,7 +39,8 @@ const DOM = {
   refreshPoem: document.getElementById('refresh-poem'),
   searchInput: document.getElementById('search-input'),
   langToggle: document.getElementById('lang-toggle'),
-  langLabel: document.getElementById('lang-label')
+  langLabel: document.getElementById('lang-label'),
+  bgReal: document.getElementById('bg-real')
 };
 
 let localPoems = [];
@@ -107,16 +108,44 @@ async function toggleLanguage() {
   updateClock();
 }
 
-function displayBackground(background) {
-  if (background && background.url) {
-    document.body.style.backgroundImage = `url('${background.url}')`;
-    
+function preloadImage(url) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve(url);
+    img.onerror = reject;
+    img.src = url;
+  });
+}
+
+function displayBackground(background, animate = true) {
+  if (!background || !background.url) return;
+
+  const apply = () => {
+    if (animate) {
+      DOM.bgReal.classList.remove('visible');
+      DOM.bgReal.classList.add('transitioning');
+
+      requestAnimationFrame(() => {
+        DOM.bgReal.style.backgroundImage = `url('${background.url}')`;
+        DOM.bgReal.classList.remove('transitioning');
+
+        requestAnimationFrame(() => {
+          DOM.bgReal.classList.add('visible');
+        });
+      });
+    } else {
+      DOM.bgReal.style.backgroundImage = `url('${background.url}')`;
+      DOM.bgReal.classList.add('visible');
+    }
+
     if (background.creditUrl) {
       DOM.imageCredit.innerHTML = `<a href="${background.creditUrl}" target="_blank" rel="noopener">${background.credit}</a>`;
     } else {
       DOM.imageCredit.textContent = background.credit || '';
     }
-  }
+  };
+
+  preloadImage(background.url).then(apply).catch(apply);
 }
 
 async function loadLocalPoems() {
@@ -250,11 +279,17 @@ async function refreshPoem() {
 async function refreshBackground() {
   DOM.refreshBackground.classList.add('loading');
   try {
+    DOM.bgReal.classList.remove('visible');
+    DOM.bgReal.classList.add('transitioning');
+
     const background = await getBackground(true);
     if (background) {
       await clearCurrentBackground();
       await saveCurrentBackground(background);
-      displayBackground(background);
+      displayBackground(background, true);
+    } else {
+      DOM.bgReal.classList.remove('transitioning');
+      DOM.bgReal.classList.add('visible');
     }
   } finally {
     DOM.refreshBackground.classList.remove('loading');

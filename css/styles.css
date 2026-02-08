@@ -33,11 +33,35 @@ html, body {
 body {
   font-family: var(--font-sans);
   background-color: #1a1a2e;
+}
+
+#bg-placeholder,
+#bg-real {
+  position: fixed;
+  inset: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  transition: background-image 0.8s ease-in-out;
+}
+
+#bg-placeholder {
+  z-index: 0;
+  background-image: url('../imgs/blurred_img_loading.jpg');
+}
+
+#bg-real {
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#bg-real.visible {
+  opacity: 1;
+}
+
+#bg-real.transitioning {
+  opacity: 0;
+  transition: none;
 }
 
 #background-overlay {
