@@ -1,21 +1,11 @@
 async function fetchPicsumImage() {
   const width = 1920;
   const height = 1080;
-  const randomId = Math.floor(Math.random() * 1000);
-  const url = `https://picsum.photos/id/${randomId}/${width}/${height}`;
+  const today = new Date().toISOString().split('T')[0];
+  const url = `https://picsum.photos/seed/${today}/${width}/${height}`;
   
-  const response = await fetch(url, { method: 'HEAD' });
-  if (!response.ok) {
-    const fallbackUrl = `https://picsum.photos/${width}/${height}?random=${Date.now()}`;
-    const fallbackResponse = await fetch(fallbackUrl, { method: 'HEAD', redirect: 'follow' });
-    const resolvedUrl = fallbackResponse.url || fallbackUrl;
-    return {
-      url: resolvedUrl,
-      source: 'Picsum',
-      credit: 'Photo from Lorem Picsum',
-      creditUrl: 'https://picsum.photos'
-    };
-  }
+  const response = await fetch(url, { method: 'HEAD', redirect: 'follow' });
+  if (!response.ok) throw new Error('Picsum fetch failed');
   
   return {
     url: response.url || url,
@@ -54,10 +44,9 @@ async function fetchWallhavenImage() {
 }
 
 async function fetchRandomBackground() {
-  const sources = [fetchPicsumImage, fetchWallhavenImage];
-  const shuffled = sources.sort(() => Math.random() - 0.5);
+  const sources = [fetchWallhavenImage, fetchPicsumImage];
   
-  for (const fetchFn of shuffled) {
+  for (const fetchFn of sources) {
     try {
       const result = await fetchFn();
       if (result && result.url) return result;
@@ -67,7 +56,8 @@ async function fetchRandomBackground() {
     }
   }
   
-  const fallbackUrl = `https://picsum.photos/1920/1080?random=${Date.now()}`;
+  const today = new Date().toISOString().split('T')[0];
+  const fallbackUrl = `https://picsum.photos/seed/${today}/1920/1080`;
   try {
     const response = await fetch(fallbackUrl, { method: 'HEAD', redirect: 'follow' });
     return {
