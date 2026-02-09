@@ -24,7 +24,7 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["data/poems.json", "imgs/blurred_img_loading.jpg"],
+      "resources": ["data/poems.json"],
       "matches": ["<all_urls>"]
     }
   ],
