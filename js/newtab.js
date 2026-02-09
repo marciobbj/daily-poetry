@@ -11,6 +11,7 @@ import {
 
 const TRANSLATIONS = {
   pt: {
+    pageTitle: 'Nova Aba',
     searchPlaceholder: 'Pesquisar no Google...',
     newImage: 'Nova imagem',
     newPoem: 'Novo poema',
@@ -18,6 +19,7 @@ const TRANSLATIONS = {
     readMore: 'ler mais'
   },
   en: {
+    pageTitle: 'New Tab',
     searchPlaceholder: 'Search on Google...',
     newImage: 'New image',
     newPoem: 'New poem',
@@ -93,6 +95,7 @@ function escapeHtml(text) {
 
 function updateUI() {
   const t = TRANSLATIONS[currentLanguage];
+  document.title = t.pageTitle;
   DOM.searchInput.placeholder = t.searchPlaceholder;
   DOM.refreshBackground.title = t.newImage;
   DOM.refreshPoem.title = t.newPoem;
