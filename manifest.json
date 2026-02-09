@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Daily Poetry",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Beautiful new tab with daily poems and HD nature backgrounds",
   "permissions": [
     "storage"
