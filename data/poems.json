@@ -140,7 +140,7 @@
       "id": "pt-018",
       "text": "Eu poderia suportar, embora não sem dor,\nque tivessem morrido todos os meus amores,\nmas enlouqueceria se morressem todos os meus amigos.",
       "author": "Vinícius de Moraes",
-      "title": "",
+      "title": "Amigos",
       "language": "pt",
       "lastUsed": null
     },
@@ -360,6 +360,38 @@
       "title": "",
       "language": "en",
       "lastUsed": null
-    }
+    },
+    {
+      "id": "en-021",
+      "text": "The fog comes\non little cat feet.\nIt sits looking over harbor and city\non silent haunches\nand then moves on.",
+      "author": "Carl Sandburg",
+      "title": "Fog",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-022",
+      "text": "My candle burns at both ends;\nIt will not last the night;\nBut ah, my foes, and oh, my friends--\nIt gives a lovely light!",
+      "author": "First Fog",
+      "title": "Edna St. Vicent Millay",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-023",
+      "text": "Nature's first green is gold,\nHer hardest hue to hold.\nHer early leaf's a flower;\nBut only so an hour.",
+      "author": "Nothing Gold Can Stay",
+      "title": "Robert Frost",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-024",
+      "text": "Underneath my outside face\nThere's a face that none can see.\nA little less smiley,\nA little less sure,\n But whole lot more like me",
+      "author": "Underface",
+      "title": "Shel Silverstein",
+      "language": "en",
+      "lastUsed": null
+    },
   ]
 }
