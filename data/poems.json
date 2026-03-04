@@ -140,7 +140,7 @@
       "id": "pt-018",
       "text": "Eu poderia suportar, embora não sem dor,\nque tivessem morrido todos os meus amores,\nmas enlouqueceria se morressem todos os meus amigos.",
       "author": "Vinícius de Moraes",
-      "title": "",
+      "title": "Amigos",
       "language": "pt",
       "lastUsed": null
     },
@@ -198,6 +198,54 @@
       "text": "Se sou amado\nQuanto mais amado\nMais correspondo ao amor\nSe sou esquecido\nDevo esquecer também\nPois amor é feito espelho\nTem que ter reflexo.",
       "author": "Pablo Neruda",
       "title": "Reflexo",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-026",
+      "text": "Stop.\nA vida parou\nou foi o automóvel?",
+      "author": "Carlos Drummond de Andrade",
+      "title": "Cota Zero",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-027",
+      "text": "não discuto\ncom o destino\no que pintar\neu assino",
+      "author": "Paulo Leminski",
+      "title": "Sem Título",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-028",
+      "text": "Andorinha lá fora está dizendo:\n— \"Passei o dia à toa, à toa!\"\nAndorinha, andorinha, minha cantiga é mais triste!\nPassei a vida à toa, à toa...",
+      "author": "Manuel Bandeira",
+      "title": "Andorinha",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-029",
+      "text": "Da minha aldeia vejo quanto da terra se pode ver no Universo...\nPor isso a minha aldeia é tão grande como outra terra qualquer\nPorque eu sou do tamanho do que vejo\nE não, do tamanho da minha altura...",
+      "author": "Alberto Caeiro",
+      "title": "O guardador de Rebanhos",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-030",
+      "text": "isso de querer\nser exatamente aquilo\nque a gente é\nainda vai\nnos levar além",
+      "author": "Paulo Leminski",
+      "title": "Sem Título",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-031",
+      "text": "Um gosto de amora\ncomida com sol. A vida\nchamava-se \"Agora\".",
+      "author": "Guilherme de Almeida",
+      "title": "Infância",
       "language": "pt",
       "lastUsed": null
     },
@@ -358,6 +406,78 @@
       "text": "Be yourself; everyone else is already taken.",
       "author": "Oscar Wilde",
       "title": "",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-021",
+      "text": "The fog comes\non little cat feet.\nIt sits looking over harbor and city\non silent haunches\nand then moves on.",
+      "author": "Carl Sandburg",
+      "title": "Fog",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-022",
+      "text": "My candle burns at both ends;\nIt will not last the night;\nBut ah, my foes, and oh, my friends--\nIt gives a lovely light!",
+      "author": "Edna St. Vicent Millay",
+      "title": "First Fog",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-023",
+      "text": "Nature's first green is gold,\nHer hardest hue to hold.\nHer early leaf's a flower;\nBut only so an hour.",
+      "author": "Robert Frost",
+      "title": "Nothing Gold Can Stay",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-024",
+      "text": "Underneath my outside face\nThere's a face that none can see.\nA little less smiley,\nA little less sure,\n But whole lot more like me",
+      "author": "Shel Silverstein",
+      "title": "Underface",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-025",
+      "text": "When life is rough,\nAnd the road is tough,\nKeep your head high,\nReach for the sky.",
+      "author": "Unknown",
+      "title": "Unknown",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-026",
+      "text": "Believe in your dreams,\nNo matter how hard it seems,\nWith every step you take,\nA new path you will make.",
+      "author": "Unknown",
+      "title": "Unknown",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-027",
+      "text": "Do you want to change the world?\nThen change yourself first.\nDo you want to change yourself?\nIf so, remain completely silent\nInside the silence-sea.",
+      "author": "Sri Chinmoy",
+      "title": "Unknown",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-028",
+      "text": "Who wants to change the world outwardly?\nEverybody, with no exception.\nWho wants to change himself\nInwardly?\nNobody, No hyperbole!",
+      "author": "Sri Chinmoy",
+      "title": "Unknown",
+      "language": "en",
+      "lastUsed": null
+    },
+    {
+      "id": "en-029",
+      "text": "The entire world may not change. The entire world cannot change.\nThe entire world even will not change.\nBut your tiny world you can and will change forever at this\nvery moment with the help of your confidence-heart.\nYours will be the unparalleled victory.",
+      "author": "Sri Chinmoy",
+      "title": "Unknown",
       "language": "en",
       "lastUsed": null
     }
