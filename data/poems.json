@@ -202,6 +202,54 @@
       "lastUsed": null
     },
     {
+      "id": "pt-026",
+      "text": "Stop.\nA vida parou\nou foi o automóvel?",
+      "author": "Carlos Drummond de Andrade",
+      "title": "Cota Zero",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-027",
+      "text": "não discuto\ncom o destino\no que pintar\neu assino",
+      "author": "Paulo Leminski",
+      "title": "Sem Título",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-028",
+      "text": "Andorinha lá fora está dizendo:\n— \"Passei o dia à toa, à toa!\"\nAndorinha, andorinha, minha cantiga é mais triste!\nPassei a vida à toa, à toa...",
+      "author": "Manuel Bandeira",
+      "title": "Andorinha",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-029",
+      "text": "Da minha aldeia vejo quanto da terra se pode ver no Universo...\nPor isso a minha aldeia é tão grande como outra terra qualquer\nPorque eu sou do tamanho do que vejo\nE não, do tamanho da minha altura...",
+      "author": "Alberto Caeiro",
+      "title": "O guardador de Rebanhos",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-030",
+      "text": "isso de querer\nser exatamente aquilo\nque a gente é\nainda vai\nnos levar além",
+      "author": "Paulo Leminski",
+      "title": "Sem Título",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
+      "id": "pt-031",
+      "text": "Um gosto de amora\ncomida com sol. A vida\nchamava-se \"Agora\".",
+      "author": "Guilherme de Almeida",
+      "title": "Infância",
+      "language": "pt",
+      "lastUsed": null
+    },
+    {
       "id": "en-001",
       "text": "Two roads diverged in a wood, and I—\nI took the one less traveled by,\nAnd that has made all the difference.",
       "author": "Robert Frost",
@@ -419,8 +467,7 @@
     },
     {
       "id": "en-028",
-      "text": "Who wants to change the world outwardly?\nEverybody, with no exception.\nWho wants to change himself
-Inwardly?\nNobody, No hyperbole!",
+      "text": "Who wants to change the world outwardly?\nEverybody, with no exception.\nWho wants to change himself\nInwardly?\nNobody, No hyperbole!",
       "author": "Sri Chinmoy",
       "title": "Unknown",
       "language": "en",
@@ -433,6 +480,6 @@ Inwardly?\nNobody, No hyperbole!",
       "title": "Unknown",
       "language": "en",
       "lastUsed": null
-    },
+    }
   ]
 }
