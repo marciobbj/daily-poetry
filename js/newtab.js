@@ -54,7 +54,7 @@ function updateClock() {
   const timeFormatter = new Intl.DateTimeFormat(locale, {
     hour: '2-digit',
     minute: '2-digit',
-    hour12: false
+    hour12: currentLanguage === 'en'
   });
   
   const dateFormatter = new Intl.DateTimeFormat(locale, {
