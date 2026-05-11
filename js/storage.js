@@ -79,19 +79,26 @@ export async function saveCurrentPoem(poem) {
   });
 }
 
-export async function getCurrentBackground() {
+export async function getBackgroundState() {
   const result = await chrome.storage.local.get([
     STORAGE_KEYS.CURRENT_BACKGROUND,
     STORAGE_KEYS.LAST_BACKGROUND_DATE
   ]);
-  
+
+  return {
+    background: result[STORAGE_KEYS.CURRENT_BACKGROUND] || null,
+    lastBackgroundDate: result[STORAGE_KEYS.LAST_BACKGROUND_DATE] || null
+  };
+}
+
+export async function getCurrentBackground() {
+  const { background, lastBackgroundDate } = await getBackgroundState();
   const today = new Date().toDateString();
-  const lastDate = result[STORAGE_KEYS.LAST_BACKGROUND_DATE];
-  
-  if (lastDate === today && result[STORAGE_KEYS.CURRENT_BACKGROUND]) {
-    return result[STORAGE_KEYS.CURRENT_BACKGROUND];
+
+  if (background && lastBackgroundDate === today) {
+    return background;
   }
-  
+
   return null;
 }
 

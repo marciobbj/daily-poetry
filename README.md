@@ -16,7 +16,7 @@
 
 - **Live Clock** — Real-time display with date in your locale
 - **Daily Poems** — Curated collection in Portuguese and English, with external API support (PoetryDB)
-- **HD Backgrounds** — Stunning nature images from Picsum and Wallhaven
+- **HD Backgrounds** — Stunning nature images from Wallhaven
 - **Smart Rotation** — Poems automatically change every day; used poems won't repeat for 30 days
 - **Google Search** — Integrated search bar
 - **Minimalist Design** — Clean, distraction-free interface with elegant typography
@@ -66,7 +66,6 @@ daily-poetry-extension/
 
 ### Image Sources
 
-- [Lorem Picsum](https://picsum.photos/) — Random HD photos
 - [Wallhaven](https://wallhaven.cc/) — Nature, landscape, minimalist wallpapers
 
 ## Browser Compatibility

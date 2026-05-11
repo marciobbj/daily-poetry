@@ -1,19 +1,4 @@
-async function fetchPicsumImage() {
-  const width = 1920;
-  const height = 1080;
-  const today = new Date().toISOString().split('T')[0];
-  const url = `https://picsum.photos/seed/${today}/${width}/${height}`;
-  
-  const response = await fetch(url, { method: 'HEAD', redirect: 'follow' });
-  if (!response.ok) throw new Error('Picsum fetch failed');
-  
-  return {
-    url: response.url || url,
-    source: 'Picsum',
-    credit: 'Photo from Lorem Picsum',
-    creditUrl: 'https://picsum.photos'
-  };
-}
+import { getBackgroundState, saveCurrentBackground } from './storage.js';
 
 async function fetchWallhavenImage() {
   const queries = ['nature', 'landscape', 'flowers', 'minimalist', 'calm', 'mountain', 'ocean', 'forest'];
@@ -44,36 +29,40 @@ async function fetchWallhavenImage() {
 }
 
 async function fetchRandomBackground() {
-  const sources = [fetchWallhavenImage, fetchPicsumImage];
-  
-  for (const fetchFn of sources) {
-    try {
-      const result = await fetchFn();
-      if (result && result.url) return result;
-    } catch (e) {
-      console.log('Image source failed:', e.message);
-      continue;
-    }
-  }
-  
-  const today = new Date().toISOString().split('T')[0];
-  const fallbackUrl = `https://picsum.photos/seed/${today}/1920/1080`;
   try {
-    const response = await fetch(fallbackUrl, { method: 'HEAD', redirect: 'follow' });
-    return {
-      url: response.url || fallbackUrl,
-      source: 'Picsum',
-      credit: 'Photo from Lorem Picsum',
-      creditUrl: 'https://picsum.photos'
-    };
-  } catch {
-    return {
-      url: fallbackUrl,
-      source: 'Picsum',
-      credit: 'Photo from Lorem Picsum',
-      creditUrl: 'https://picsum.photos'
-    };
+    return await fetchWallhavenImage();
+  } catch (e) {
+    console.log('Image source failed:', e.message);
   }
+
+  return null;
+}
+
+function getTodayKey() {
+  return new Date().toDateString();
+}
+
+function getNextMidnight() {
+  const next = new Date();
+  next.setHours(24, 0, 0, 0);
+  return next.getTime();
+}
+
+async function ensureDailyBackground(forceNew = false) {
+  const { background, lastBackgroundDate } = await getBackgroundState();
+  const today = getTodayKey();
+
+  if (!forceNew && background && lastBackgroundDate === today) {
+    return background;
+  }
+
+  const nextBackground = await fetchRandomBackground();
+  if (nextBackground && nextBackground.url) {
+    await saveCurrentBackground(nextBackground);
+    return nextBackground;
+  }
+
+  return background;
 }
 
 const POETRYDB_URL = 'https://poetrydb.org/random/1';
@@ -101,7 +90,7 @@ async function fetchExternalPoem() {
 
 chrome.runtime.onMessage.addListener((request, _sender, sendResponse) => {
   if (request.action === 'fetchBackground') {
-    fetchRandomBackground().then(sendResponse);
+    ensureDailyBackground(Boolean(request.forceNew)).then(sendResponse);
     return true;
   }
   
@@ -113,4 +102,30 @@ chrome.runtime.onMessage.addListener((request, _sender, sendResponse) => {
   }
   
   return false;
+});
+
+chrome.runtime.onInstalled.addListener(() => {
+  ensureDailyBackground().catch(() => {});
+  chrome.alarms.create('refresh-daily-background', {
+    when: getNextMidnight()
+  });
+});
+
+chrome.runtime.onStartup?.addListener(() => {
+  ensureDailyBackground().catch(() => {});
+  chrome.alarms.create('refresh-daily-background', {
+    when: getNextMidnight()
+  });
+});
+
+chrome.alarms.onAlarm.addListener((alarm) => {
+  if (alarm.name === 'refresh-daily-background') {
+    ensureDailyBackground(true)
+      .catch(() => {})
+      .finally(() => {
+        chrome.alarms.create('refresh-daily-background', {
+          when: getNextMidnight()
+        });
+      });
+  }
 });

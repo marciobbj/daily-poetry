@@ -4,7 +4,6 @@ import {
   selectRandomPoem,
   getCurrentBackground,
   saveCurrentBackground,
-  clearCurrentBackground,
   getLanguage,
   saveLanguage
 } from './storage.js';
@@ -222,7 +221,7 @@ async function fetchBackground() {
   return new Promise((resolve) => {
     const timeout = setTimeout(() => resolve(null), 10000);
     try {
-      chrome.runtime.sendMessage({ action: 'fetchBackground' }, (response) => {
+      chrome.runtime.sendMessage({ action: 'fetchBackground', forceNew: true }, (response) => {
         clearTimeout(timeout);
         if (chrome.runtime.lastError) {
           console.log('Background fetch error:', chrome.runtime.lastError.message);
@@ -240,13 +239,11 @@ async function fetchBackground() {
 }
 
 async function getBackground(forceNew = false) {
-  if (!forceNew) {
-    const current = await getCurrentBackground();
-    if (current && current.url) return current;
-  }
+  const current = await getCurrentBackground();
+  if (!forceNew && current && current.url) return current;
   
   try {
-    const background = await fetchBackground();
+    const background = await fetchBackground(forceNew);
     if (background && background.url) {
       await saveCurrentBackground(background);
       return background;
@@ -255,11 +252,10 @@ async function getBackground(forceNew = false) {
     // intentionally empty
   }
   
-  // Fallback: reuse expired background and refresh its date to prevent re-fetching every tab
+  // Fallback: reuse cached background if the fetch fails
   try {
     const fallback = await chrome.storage.local.get('currentBackground');
     if (fallback.currentBackground && fallback.currentBackground.url) {
-      await saveCurrentBackground(fallback.currentBackground);
       return fallback.currentBackground;
     }
   } catch {
@@ -287,7 +283,6 @@ async function refreshBackground() {
 
     const background = await getBackground(true);
     if (background) {
-      await clearCurrentBackground();
       await saveCurrentBackground(background);
       displayBackground(background, true);
     } else {
